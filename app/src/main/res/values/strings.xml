@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lesson4Kotlin</string>
+    <string name="btn_whatsapp">WhatsApp</string>
+    <string name="et_number">Введите номер телефона</string>
+</resources>

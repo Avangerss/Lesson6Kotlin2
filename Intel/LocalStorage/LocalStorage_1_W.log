@@ -1,0 +1,6 @@
+[2023-05-30 14:07:43.210][DBG] [lyj][NewLocalStorageClass] return true
+[2023-05-30 14:07:43.211][DBG] [lyj][CLocalStorage::Initialize] first disk path [C:/Users/Public/iVMS-4200 AC/UserData/Video/]
+[2023-05-30 14:09:41.522][DBG] [lyj][CLocalStorage::Release] close all opened channel
+[2023-05-30 14:09:41.522][DBG] [lyj][CLocalStorage::Release] close disk check thread
+[2023-05-30 14:09:41.522][DBG] [lyj][CLocalStorage::Release] success
+[2023-05-30 14:09:41.522][DBG] [lyj][DelLocalStorageClass] return true
