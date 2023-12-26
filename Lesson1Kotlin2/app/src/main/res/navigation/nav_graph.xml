@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.example.lesson1kotlin2.fragments.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_first_fragment_to_sekond_fragment"
+            app:destination="@id/sekond_fragment" />
+        <action
+            android:id="@+id/action_first_fragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sekond_fragment"
+        android:name="com.example.lesson1kotlin2.fragments.SekondFragment"
+        android:label="fragment_sekond"
+        tools:layout="@layout/fragment_sekond" >
+        <action
+            android:id="@+id/action_sekond_fragment_to_third_fagment2"
+            app:destination="@id/third_fagment" />
+        <action
+            android:id="@+id/action_sekond_fragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_fagment"
+        android:name="com.example.lesson1kotlin2.fragments.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.lesson1kotlin2.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+
+        <argument
+            android:name="modle"
+            app:argType="com.example.lesson1kotlin2.fragments.Cryptocurrency" />
+    </fragment>
+</navigation>
