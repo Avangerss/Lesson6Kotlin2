@@ -1,38 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
+    android:orientation="vertical"
     app:cardCornerRadius="30sp"
     tools:context=".fragments.DetailFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_detail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_goback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="Назад"
-        android:layout_gravity="start"/>
+        android:backgroundTint="@color/yelow"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20sp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:cornerRadius="20sp"
+        android:text="Назад" />
 
-    <ImageView
-        android:id="@+id/image_krypto"
-        android:layout_width="200dp"
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_detail"
+        android:layout_width="380dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_launcher_background"/>
+        android:background="@color/white" />
 
     <TextView
-        android:id="@+id/tv_crypto_name"
-        android:layout_width="360dp"
+        android:id="@+id/tv_detail"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:textSize="24sp"
         android:textStyle="bold"
-        android:text="CRIPTO"/>
-
-
-
-</LinearLayout>
+        android:textSize="18dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="20sp"/>
+    </LinearLayout>
+</FrameLayout>

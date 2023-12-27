@@ -39,8 +39,7 @@ class DetailFragment : Fragment() {
     }
 
     private fun getData() {
-
-        binding.tvCryptoName.text = args.modle.text
-        Glide.with(binding.imageKrypto).load(args.modle.image).into(binding.imageKrypto)
+        binding.tvDetail.text = args.modle.text
+        Glide.with(binding.ivDetail).load(args.modle.image).into(binding.ivDetail)
     }
 }
