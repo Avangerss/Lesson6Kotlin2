@@ -6,19 +6,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lesson1kotlin2.databinding.ItemsBinding
 
-class CriptoAdapter(val onClickable : OnClickable) : RecyclerView.Adapter<CriptoAdapter.CriptoViewHolder>() {
+class CriptoAdapter(val onClickable: OnClickable? = null) :
+    RecyclerView.Adapter<CriptoAdapter.CriptoViewHolder>() {
 
     private var criptoList = mutableListOf<Cryptocurrency>()
 
     fun setCryptoList(cryptoList: MutableList<Cryptocurrency>) {
         this.criptoList = cryptoList
     }
-    inner class CriptoViewHolder(var binding: ItemsBinding): RecyclerView.ViewHolder(binding.root) {
+
+    inner class CriptoViewHolder(var binding: ItemsBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun onBind(cryptocurrency: Cryptocurrency) {
             binding.tvCryptoName.text = cryptocurrency.text
             Glide.with(binding.imageKrypto).load(cryptocurrency.image).into(binding.imageKrypto)
             binding.root.setOnClickListener {
-                onClickable.onClick(cryptocurrency)
+                onClickable?.onClick(cryptocurrency)
             }
         }
     }
