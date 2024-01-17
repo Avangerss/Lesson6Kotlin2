@@ -3,22 +3,24 @@ package com.example.mynoteshello.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mynoteshello.data.local.room.entities.Note
 import com.example.mynoteshello.databinding.NoteItemBinding
 import com.example.mynoteshello.ui.models.NotesModel
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViwHolter>() {
 
-    private var noteList = mutableListOf<NotesModel>()
+    private var noteList = listOf<Note>()
 
-    fun setNoteList(noteList: MutableList<NotesModel>) {
+    fun setNoteList(noteList: List<Note>) {
         this.noteList = noteList
     }
+
     class NoteViwHolter(private val biding: NoteItemBinding) :
         RecyclerView.ViewHolder(biding.root) {
-        fun onBind(notesModel: NotesModel) {
-            biding.tvNote.text = notesModel.note
-            biding.tvTitleNote.text = notesModel.title
-            biding.tvDateTime.text = notesModel.data
+        fun onBind(notesModel: Note) {
+            biding.tvNote.text = notesModel.title
+            biding.tvTitleNote.text = notesModel.description
+            biding.tvDateTime.text = notesModel.description
         }
     }
 
