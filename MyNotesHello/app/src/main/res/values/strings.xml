@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyNotesHello</string>
     <string name="shared_preferences_name" />
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ent">Пропустить</string>
     <string name="fanction">Куча функций и интересных фишек</string>
@@ -10,4 +10,8 @@
     <string name="fun">Очень удобный функционал</string>
     <string name="plus">+</string>
     <string name="extr">Поиск заметок</string>
+    <string name="go">Нужно сделать:</string>
+    <string name="g02">Нужно сделать:</string>
+    <string name="date">30 мая</string>
+    <string name="time">17:21</string>
 </resources>

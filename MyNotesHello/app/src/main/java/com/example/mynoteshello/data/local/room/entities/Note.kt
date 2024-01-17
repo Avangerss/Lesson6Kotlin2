@@ -10,5 +10,5 @@ data class Note(
     var id: Int = 0,
     val title: String,
     val description: String,
-    val date: Date
+//    val date: Date
 )

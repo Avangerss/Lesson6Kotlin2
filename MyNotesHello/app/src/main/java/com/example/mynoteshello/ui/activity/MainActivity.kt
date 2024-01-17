@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity() {
         navControl()
     }
 
-    fun navControl(){
+    fun navControl() {
 
         val preferenceHelper = PreferencesHelper(this)
         if (!preferenceHelper.isShovOnBoard) {
-            val navHostFragment = supportFragmentManager.findFragmentById(R.id.fcv_activity) as NavHostFragment
+            val navHostFragment =
+                supportFragmentManager.findFragmentById(R.id.fcv_activity) as NavHostFragment
             val navController = navHostFragment.navController
             val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
             navGraph.setStartDestination(R.id.viewPagerFragment)
